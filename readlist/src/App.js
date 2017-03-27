@@ -16,19 +16,19 @@ const App = () => {
           <div className="options border_shadow">
             <ul>
               <li>
-                <div className="option"><Link to="/mylist"><span><Icon type="copy" />我的书单</span></Link></div>
+                <Link to="/mylist"><div className="option"><span><Icon type="copy" />我的书单</span></div></Link>
                 <div className="br border_shadow"></div>
               </li>
               <li>
-                <div className="option"><Link to="/"><span><Icon type="file-text" />正在阅读</span></Link></div>
+                <Link to="/"><div className="option"><span><Icon type="file-text" />正在阅读</span></div></Link>
                 <div className="br border_shadow"></div>
               </li>
               <li>
-                <div className="option"><Link to="/"><span><Icon type="star" />已经读过</span></Link></div>
+                <Link to="/"><div className="option"><span><Icon type="star" />已经读过</span></div></Link>
                 <div className="br border_shadow"></div>
               </li>
               <li>
-                <div className="option"><Link to="/"><span><Icon type="book" />书籍推荐</span></Link></div>
+                <Link to="/"><div className="option"><span><Icon type="book" />书籍推荐</span></div></Link>
                 <div className="br border_shadow"></div>
               </li>
             </ul>
