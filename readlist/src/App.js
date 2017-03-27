@@ -1,24 +1,44 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import { Link, Route } from 'react-router-dom'
+import { Icon } from 'antd'
 
-import { Button } from 'antd'
+import MyList from './components/MyList.js'
 
-class App extends Component {
-  render() {
+
+
+const App = () => {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <div>
+        <nav className="nav"></nav>
+        <div className="container">
+          <div className="options border_shadow">
+            <ul>
+              <li>
+                <div className="option"><Link to="/mylist"><span><Icon type="copy" />我的书单</span></Link></div>
+                <div className="br border_shadow"></div>
+              </li>
+              <li>
+                <div className="option"><Link to="/"><span><Icon type="file-text" />正在阅读</span></Link></div>
+                <div className="br border_shadow"></div>
+              </li>
+              <li>
+                <div className="option"><Link to="/"><span><Icon type="star" />已经读过</span></Link></div>
+                <div className="br border_shadow"></div>
+              </li>
+              <li>
+                <div className="option"><Link to="/"><span><Icon type="book" />书籍推荐</span></Link></div>
+                <div className="br border_shadow"></div>
+              </li>
+            </ul>
+          </div>
+          <div className="content border_shadow">
+            <Route path="/mylist" component={MyList}/>
+          </div>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Button type="default">antd</Button>
       </div>
     );
-  }
 }
 
-export default App;
+export default App
