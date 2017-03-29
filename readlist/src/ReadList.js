@@ -1,14 +1,15 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { Link, Route } from 'react-router-dom'
+import { Link, Route, Switch } from 'react-router-dom'
 import { Icon } from 'antd'
 
 import MyList from './components/MyList.js'
+import Test from './components/Test.js'
 
 
 
-const App = () => {
+const ReadList = () => {
     return (
       <div>
         <nav className="nav"></nav>
@@ -16,11 +17,11 @@ const App = () => {
           <div className="options border_shadow">
             <ul>
               <li>
-                <Link to="/mylist"><div className="option"><span><Icon type="copy" />我的书单</span></div></Link>
+                <Link to="/readlist/mylist"><div className="option"><span><Icon type="copy" />我的书单</span></div></Link>
                 <div className="br border_shadow"></div>
               </li>
               <li>
-                <Link to="/"><div className="option"><span><Icon type="file-text" />正在阅读</span></div></Link>
+                <Link to="/readlist/test"><div className="option"><span><Icon type="file-text" />正在阅读</span></div></Link>
                 <div className="br border_shadow"></div>
               </li>
               <li>
@@ -34,11 +35,14 @@ const App = () => {
             </ul>
           </div>
           <div className="content border_shadow">
-            <Route path="/mylist" component={MyList}/>
+            <Switch>
+              <Route path="/readlist/mylist" component={MyList} />
+              <Route path="/readlist/test" component={Test} />
+            </Switch>
           </div>
         </div>
       </div>
     );
 }
 
-export default App
+export default ReadList

@@ -9,7 +9,7 @@ const MyList = ({match}) => {
                  type="info"/>
         </div>
           <div className="list">
-            <div className="box box_1">《深入浅出React技术栈》</div>
+            <div className="box box_1 title">书名</div>
             <div className="br border_shadow"></div>
             <div className="box box_2">《Express指南》</div>
             <div className="br border_shadow"></div>

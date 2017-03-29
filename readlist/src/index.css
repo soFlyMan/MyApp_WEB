@@ -21,6 +21,8 @@ ul {
   align-items: flex-start;
   justify-content: space-between;
   padding: 80px 300px;
+  background-color: #F4F5F5;
+
 }
 .border_shadow{
   background-color: #FFF;
@@ -73,6 +75,9 @@ ul {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+}
+.list .title {
+  color: #5cb85c;
 }
 .list .box {
   width: 100%;
