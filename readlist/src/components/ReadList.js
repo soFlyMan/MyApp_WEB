@@ -1,11 +1,13 @@
 import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+// import logo from './logo.svg'
+import '../App.css'
 import { Link, Route, Switch } from 'react-router-dom'
 import { Icon } from 'antd'
 
-import MyList from './components/MyList.js'
-import Test from './components/Test.js'
+import Divider from 'material-ui/Divider'
+
+import MyList from './MyList.js'
+import Test from './Test.js'
 
 
 
@@ -13,6 +15,7 @@ const ReadList = () => {
     return (
       <div>
         <nav className="nav"></nav>
+        <Divider />
         <div className="container">
           <div className="options border_shadow">
             <ul>
