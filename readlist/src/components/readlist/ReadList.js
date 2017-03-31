@@ -1,6 +1,6 @@
 import React from 'react'
 // import logo from './logo.svg'
-import '../App.css'
+import '../../css/ReadList.css'
 import { Link, Route, Switch } from 'react-router-dom'
 import { Icon } from 'antd'
 

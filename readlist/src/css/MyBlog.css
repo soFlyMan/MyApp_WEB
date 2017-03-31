@@ -1,0 +1,35 @@
+.myblog {
+  /*display: -webkit-flex;
+  display: flex;
+  align-items: flex-start;*/
+  margin-left: 280px;
+}
+.myblog .title {
+  display: inline-block;
+  width: 26%;
+  height: 800px;
+  padding: 130px 24px 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  overflow-y: auto;
+}
+.myblog .title p {
+  color: #000;
+  margin: 18px 0 0;
+}
+.myblog .title p:hover {
+  text-decoration: underline;
+}
+.myblog .content {
+  display: inline-block;
+  float: right;
+  font-size: 18px;
+  padding: 80px 60px 60px;
+  width: 74%;
+  height: 800px;
+  /*text-align: center;*/
+  overflow-y: auto;
+  /*background-color: #ccc;*/
+  overflow-x: hidden;
+}
