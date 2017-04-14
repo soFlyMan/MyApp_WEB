@@ -10,13 +10,16 @@ import MenuItem from 'material-ui/MenuItem'
 class MyBlog extends Component {
   constructor(props){
     super(props)
-    this.state={ value: 1}
+    this.state={
+       value: 1,
+       title: '6 Harsh Truths That Will Make You a Better Person'
+    }
   }
 
   handleChange = (event, index, value) => this.setState({value})
 
   rawMarkup(){
-    var str = `# 6 Harsh Truths That Will Make You a Better Person
+    var str = `6 Harsh Truths That Will Make You a Better Person
     I want you to try something: Name five impressive things about
     yourself.Write them down or just shout them out loud to the room.
     But here's the  catch -- you're not allowed to list anything you
@@ -105,7 +108,11 @@ class MyBlog extends Component {
           <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
           <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
         </div>
-        <div className="content"><div dangerouslySetInnerHTML={this.rawMarkup()}></div>
+        <div className="content">
+          <h1>{this.state.title}</h1>
+          <div dangerouslySetInnerHTML={this.rawMarkup()}>
+
+          </div>
         </div>
       </div>
     )
