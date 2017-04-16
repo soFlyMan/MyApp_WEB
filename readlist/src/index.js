@@ -44,7 +44,7 @@ class App extends Component {
                 </Link>
               <Link to="/"><MenuItem>My Blog</MenuItem></Link>
               <Divider />
-              <Link to="/readlist/"><MenuItem>Read List</MenuItem></Link>
+              <Link to="/readlist/"><MenuItem onClick={this.handleToggle}>Read List</MenuItem></Link>
               <Divider />
               <MenuItem>Chat Room</MenuItem>
             </Drawer>
