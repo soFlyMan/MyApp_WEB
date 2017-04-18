@@ -4,14 +4,6 @@ import '../../css/introduce.css'
 import QueueAnim from 'rc-queue-anim'
 
 
-const style = {
-  height: 1800,
-  width: "90%",
-  margin: 20,
-  textAlign: 'center',
-  display: 'inline-block',
-}
-
 const Introduce = () => {
   return (
     <div className="introduce" style={{marginLeft: 256}}>
