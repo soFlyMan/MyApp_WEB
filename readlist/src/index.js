@@ -30,11 +30,9 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div>
-            <div>
-              <Route exact path="/" component={MyBlog} />
-              <Route path="/introduce" component={Introduce} />
-              <Route path="/readlist" component={ReadList} />
-            </div>
+            <Route exact path="/" component={MyBlog} />
+            <Route path="/introduce" component={Introduce} />
+            <Route path="/readlist" component={ReadList} />
             <Drawer open={this.state.open}>
               <Link to="/introduce">
                 <MenuItem>

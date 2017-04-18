@@ -6,6 +6,7 @@ import '../../css/MyBlog.css'
 import DropDownMenu from 'material-ui/DropDownMenu'
 import MenuItem from 'material-ui/MenuItem'
 
+import QueueAnim from 'rc-queue-anim'
 
 class MyBlog extends Component {
   constructor(props){
@@ -91,22 +92,18 @@ class MyBlog extends Component {
               <MenuItem value={4} primaryText="资源" />
             </DropDownMenu>
           </div>
-          <a><p>《搞定》最佳实践：如何利用滴答清单（TickTick）实践 GTD 理念？</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
-          <a><p>6 Harsh Truths That Will Make You a Better Person</p></a>
+          <QueueAnim>
+          <div key="1">  <a><p>《搞定》最佳实践：如何利用滴答清单（TickTick）实践 GTD 理念？</p></a></div>
+          <div key="2">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
+          <div key="3">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
+          <div key="4">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
+          <div key="5">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
+          <div key="6">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
+          <div key="7">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
+          <div key="8">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
+          <div key="9">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
+
+          </QueueAnim>
         </div>
         <div className="content">
           <h1>{this.state.title}</h1>

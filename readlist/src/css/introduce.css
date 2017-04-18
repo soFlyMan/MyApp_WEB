@@ -1,0 +1,22 @@
+body {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+#root > [data-reactroot] {
+  height: 100%
+}
+.introduce {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 80px;
+  color: #FFF;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #dce7e8, #92ebf4);
+  /*background: url("https://zos.alipayobjects.com/rmsportal/gGlUMYGEIvjDOOw.jpg") no-repeat center center fixed;*/
+
+  /*background-size： 100% 100%;*/
+}

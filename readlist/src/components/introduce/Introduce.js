@@ -1,6 +1,8 @@
 import React from 'react'
+import '../../css/introduce.css'
 
-import Paper from 'material-ui/Paper'
+import QueueAnim from 'rc-queue-anim'
+
 
 const style = {
   height: 1800,
@@ -12,9 +14,10 @@ const style = {
 
 const Introduce = () => {
   return (
-    <div style={{marginLeft: 300}}>
-      <Paper style={style} zDepth={1} />
-
+    <div className="introduce" style={{marginLeft: 256}}>
+      <QueueAnim duration="3000" type="bottom">
+        <div key="1">soFly</div>
+      </QueueAnim>
     </div>
   )
 }
