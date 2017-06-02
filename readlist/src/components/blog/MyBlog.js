@@ -1,26 +1,8 @@
 import React, { Component } from 'react'
-import Remarkable from 'remarkable'
+// import Remarkable from 'remarkable'
+import ReactMarkdown from 'react-markdown'
 
-import '../../css/MyBlog.css'
-
-import DropDownMenu from 'material-ui/DropDownMenu'
-import MenuItem from 'material-ui/MenuItem'
-
-import QueueAnim from 'rc-queue-anim'
-
-class MyBlog extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-       value: 1,
-       title: '6 Harsh Truths That Will Make You a Better Person'
-    }
-  }
-
-  handleChange = (event, index, value) => this.setState({value})
-
-  rawMarkup(){
-    var str = `6 Harsh Truths That Will Make You a Better Person
+var input = `6 Harsh Truths That Will Make You a Better Person
     I want you to try something: Name five impressive things about
     yourself.Write them down or just shout them out loud to the room.
     But here's the  catch -- you're not allowed to list anything you
@@ -28,7 +10,7 @@ class MyBlog extends Component {
     things that you do (i.e., I just wona national chess tournament,
     I make the best chili in Massachusetts). If  you found that
     difficult, well, this is for you, and you are going tofucking hate
-    hearing it.
+    hearing it.\n\n
 
     我们都一样，渴望着建树功勋、改变世界，可是伴随着年岁的增长，却发现想要实现
     的梦想依然那么遥远，而时间却依然残酷得流逝着，不会仅仅因为「你」而发生丝毫
@@ -71,15 +53,38 @@ class MyBlog extends Component {
     终身的「目标」，以这样的姿态「生活在这世界上」。
 
 `
-    var md = new Remarkable('full', {
-      html: true,
-      linkify: true,
-      typographer: true
-    })
-    var rawMarkup = md.render(str)
-    return {__html:rawMarkup}
+
+import '../../css/MyBlog.css'
+
+import DropDownMenu from 'material-ui/DropDownMenu'
+import MenuItem from 'material-ui/MenuItem'
+
+import QueueAnim from 'rc-queue-anim'
+
+class MyBlog extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+       value: 1,
+       title: '6 Harsh Truths That Will Make You a Better Person',
+       blogs: ['aaa','bbb','cccccc','ddddddd','《搞定》最佳实践：如何利用滴答清单（TickTick）实践 GTD 理念？','6 Harsh Truths That Will Make You a Better Person']
+    }
   }
+
+  handleChange = (event, index, value) => this.setState({value})
+
+//   rawMarkup(){
+//
+//     var md = new Remarkable('full', {
+//       html: true,
+//       linkify: true,
+//       typographer: true
+//     })
+//     var rawMarkup = md.render(str)
+//     return {__html:rawMarkup}
+//   }
   render(){
+    var a = 0
     return (
       <div className="myblog">
         <div className="title">
@@ -93,23 +98,19 @@ class MyBlog extends Component {
             </DropDownMenu>
           </div>
           <QueueAnim>
-          <div key="1">  <a><p>《搞定》最佳实践：如何利用滴答清单（TickTick）实践 GTD 理念？</p></a></div>
-          <div key="2">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
-          <div key="3">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
-          <div key="4">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
-          <div key="5">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
-          <div key="6">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
-          <div key="7">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
-          <div key="8">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
-          <div key="9">  <a><p>6 Harsh Truths That Will Make You a Better Person</p></a></div>
-
+            {this.state.blogs.map(val => {
+              a = a+1
+              return (
+                <div key={a}><a><p>{val}</p></a></div>
+              )
+            })}
           </QueueAnim>
         </div>
         <div className="content">
           <h1>{this.state.title}</h1>
-          <div dangerouslySetInnerHTML={this.rawMarkup()}>
+          <ReactMarkdown source={input} />
 
-          </div>
+
         </div>
       </div>
     )

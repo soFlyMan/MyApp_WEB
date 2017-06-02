@@ -17,6 +17,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import ReadList from './components/readlist/ReadList.js'
 import MyBlog from './components/blog/MyBlog.js'
 import Introduce from './components/introduce/Introduce.js'
+import Editor from './components/editor/Editor.js'
 
 injectTapEventPlugin()
 class App extends Component {
@@ -26,6 +27,10 @@ class App extends Component {
   }
 
   handleToggle = () => this.setState({open: !this.state.open})
+
+  handleClose = () => this.setState({open: false})
+
+  handleOpen = () => this.setState({open: true})
   render() {
     return (
       <MuiThemeProvider>
@@ -33,6 +38,7 @@ class App extends Component {
             <Route exact path="/" component={MyBlog} />
             <Route path="/introduce" component={Introduce} />
             <Route path="/readlist" component={ReadList} />
+            <Route path="/editor" component={Editor} />
             <Drawer open={this.state.open}>
               <Link to="/introduce">
                 <MenuItem>
@@ -42,9 +48,11 @@ class App extends Component {
                 </Link>
               <Link to="/"><MenuItem>My Blog</MenuItem></Link>
               <Divider />
-              <Link to="/readlist/"><MenuItem onClick={this.handleToggle}>Read List</MenuItem></Link>
+              <Link to="/readlist/"><MenuItem>Read List</MenuItem></Link>
               <Divider />
               <MenuItem>Chat Room</MenuItem>
+              <Divider />
+              <Link to="/editor"><MenuItem>Editor</MenuItem></Link>
             </Drawer>
           </div>
       </MuiThemeProvider>

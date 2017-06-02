@@ -1,5 +1,7 @@
 var router = require('koa-router')();
 
+var User = require('../models/user.js');
+
 router.get('/', async function (ctx, next) {
   ctx.state = {
     title: 'koa2 title'
